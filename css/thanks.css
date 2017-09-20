@@ -1,0 +1,95 @@
+body {
+  background-color: #ebebeb;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+#thx-page {
+  padding: 25px 0 0; }
+
+#thx-page h1 {
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center; }
+
+#thx-page ul {
+  max-width: 800px;
+  width: 100%;
+  margin: 35px auto 0;
+  list-style: none; }
+
+#thx-page ul li {
+  position: relative;
+  padding-left: 35px;
+  font-size: 18px;
+  color: #141414;
+  margin: 15px 0 0; }
+  #thx-page ul li:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 4px;
+    background: url("../img/stick.png") no-repeat center; }
+
+.btn-group {
+  text-align: center;
+  margin: 45px 0 0;
+  width: 100%;
+  padding: 0 0 45px 0; }
+  .btn-group img {
+    margin: 15px auto; }
+
+.thx-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  background: #EC313C;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px; }
+  .thx-btn:hover {
+    color: #fff; }
+
+.warning {
+  max-width: 900px;
+  margin: 30px auto 0;
+  font-size: 18px;
+  padding: 15px;
+  font-weight: bold;
+  border: 2px solid #EC313C; }
+
+@media (min-width: 48em) {
+  .warning {
+    max-width: 900px;
+    margin: 30px auto 0;
+    font-size: 24px;
+    padding: 20px;
+    font-weight: bold;
+    border: 4px solid #EC313C; }
+  #thx-page {
+    padding: 60px 0 0; }
+  #thx-page h1 {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center; }
+  #thx-page ul {
+    max-width: 800px;
+    width: 100%;
+    margin: 45px auto 0;
+    list-style: none; }
+  #thx-page ul li {
+    position: relative;
+    padding-left: 35px;
+    font-size: 22px;
+    color: #141414;
+    margin: 15px 0 0; }
+    #thx-page ul li:before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 4px;
+      background: url("../img/stick.png") no-repeat center; } }

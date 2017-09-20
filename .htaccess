@@ -1,0 +1,39 @@
+#naive
+FileETag MTime Size
+
+<IfModule mod_headers.c>
+# 1 MONTH
+<FilesMatch "\.(jpg|jpeg|gif|png|swf|css|js)$">
+    Header set Cache-Control "max-age=2419200, public"
+</FilesMatch>
+# 1 DAY
+<FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "max-age=86400, private, proxy-revalidate"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+<FilesMatch "\.(jpg|jpeg|gif|png|swf|css|js)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
+<FilesMatch "\.(html|htm|php)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 day"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file \.(html?|txt|css|js|php|pl|xml)$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+<Ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</Ifmodule>
+#endofnaive
